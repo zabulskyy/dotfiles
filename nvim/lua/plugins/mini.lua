@@ -4,7 +4,7 @@ return { 'echasnovski/mini.nvim', version = false,
     require('mini.indentscope').setup({
     symbol = "│", 
   })
-    require('mini.pairs').setup()
+--    require('mini.pairs').setup()
   end,
   
 }
