@@ -4,12 +4,15 @@
 local keymap = vim.keymap  
 
 keymap.set("i", "<tab>", "    ", { desc = "Insert four tabs" })
-keymap.set("n", "<leader>tc", ":colorscheme catppuccin-mocha<CR><esc>", { desc = "catppuccin mocha" })
-keymap.set("n", "<leader>tm", ":colorscheme catppuccin-macchiato<CR><esc>", { desc = "catppuccin macchiato" })
-keymap.set("n", "<leader>tf", ":colorscheme catppuccin-frappe<CR><esc>", { desc = "catppuccin frappe" })
-keymap.set("n", "<leader>tl", ":colorscheme catppuccin-latte<CR><esc>", { desc = "catppuccin latte" })
-keymap.set("n", "<leader>tg", ":colorscheme gruvbox<CR><esc>", { desc = "gruvbox dark" })
+keymap.set("n", "<leader>cc", ":colorscheme catppuccin-mocha<CR><esc>", { desc = "catppuccin mocha" })
+keymap.set("n", "<leader>cm", ":colorscheme catppuccin-macchiato<CR><esc>", { desc = "catppuccin macchiato" })
+keymap.set("n", "<leader>cf", ":colorscheme catppuccin-frappe<CR><esc>", { desc = "catppuccin frappe" })
+keymap.set("n", "<leader>cl", ":colorscheme catppuccin-latte<CR><esc>", { desc = "catppuccin latte" })
+keymap.set("n", "<leader>cg", ":colorscheme gruvbox<CR><esc>", { desc = "gruvbox dark" })
 
+
+-- terminal
+keymap.set("n", "<leader>th", ":vertical terminal<CR><esc>", {desc="open terminal split horizontally"})
 
 -- Clear search with <esc>
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
