@@ -26,8 +26,3 @@ make CMAKE_BUILD_TYPE=Release \
 export PATH=”~/neovim/bin:$PATH” >> ~/.bashrc
 source ~/.bashrc
 ```
-
-```
-cat ~/.bashrc.omb-backup-$(date +%Y%m%d%H%M%S) >> ~/.bashrc
-cat ~/.dotfiles/.bashrc >> ~/.bashrc
-```
