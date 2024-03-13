@@ -25,4 +25,5 @@ make CMAKE_BUILD_TYPE=Release \
      CMAKE_INSTALL_PREFIX=~/neovim install
 export PATH=”~/neovim/bin:$PATH” >> ~/.bashrc
 source ~/.bashrc
+nvim
 ```
