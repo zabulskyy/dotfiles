@@ -6,6 +6,8 @@ sudo apt install curl
 ```bash
 cd ~/.dotfiles
 bash oh-my-bash.sh
+cat ~/.bashrc.omb-backup >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ```
