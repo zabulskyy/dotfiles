@@ -320,5 +320,3 @@ function _omb_install_main {
 
 _omb_install_main "$@" 5>&2
 
-
-cat ~/.bashrc.omb-backup >> ~/.bashrc
