@@ -4,7 +4,7 @@ sudo apt-get update
 sudo apt install curl
 ```
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+bash -c oh-my-bash.sh
 ```
 
 ```
