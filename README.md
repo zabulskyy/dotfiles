@@ -4,7 +4,8 @@ sudo apt-get update
 sudo apt install curl
 ```
 ```bash
-bash -c oh-my-bash.sh
+cd ~/.dotfiles
+bash oh-my-bash.sh
 ```
 
 ```
