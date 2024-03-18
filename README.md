@@ -2,19 +2,23 @@
 git clone https://github.com/zabulskyy/dotfiles ~/.dotfiles && mv ~/.dotfiles/nvim ~/.config
 sudo apt-get update
 sudo apt install curl
+
 ```
 ```bash
 cd ~/.dotfiles
 bash oh-my-bash.sh
 cat ~/.bashrc.omb-backup >> ~/.bashrc
 source ~/.bashrc
+
 ```
 
 ```
 sudo apt-get install ninja-build \
      gettext libtool libtool-bin \
      autoconf automake cmake g++ \
-     pkg-config unzip
+     pkg-config unzip \
+     npm
+
 ```
 
 ```
@@ -26,4 +30,5 @@ make CMAKE_BUILD_TYPE=Release \
 alias nvim=~/neovim/bin/nvim
 source ~/.bashrc
 nvim
+
 ```
