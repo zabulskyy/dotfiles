@@ -16,8 +16,10 @@ source ~/.bashrc
 sudo apt-get install ninja-build \
      gettext libtool libtool-bin \
      autoconf automake cmake g++ \
-     pkg-config unzip \
+     pkg-config unzip
+```
 
+```
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs            
 
