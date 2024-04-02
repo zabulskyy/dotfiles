@@ -37,12 +37,15 @@ keymap.set("i", "`", "``<left>", { desc = "Close ` quote" })
 
 
 -- themes and tweaks
-keymap.set("i", "<tab>", "    ", { desc = "Insert four tabs" })
+-- set bg to light
+keymap.set("n", "<leader>cz", ":set background=light<CR><esc>", { desc = "catppuccin latte" })
+-- set bg to dark
+keymap.set("n", "<leader>cx", ":set background=dark<CR><esc>", { desc = "catppuccin dark" })
+
 keymap.set("n", "<leader>cg", ":colorscheme gruvbox<CR><esc>", { desc = "gruvbox" })
 keymap.set("n", "<leader>cm", ":colorscheme catppuccin-macchiato<CR><esc>", { desc = "catppuccin macchiato" })
 keymap.set("n", "<leader>cc", ":colorscheme catppuccin-mocha<CR><esc>", { desc = "catppuccin mocha" })
 keymap.set("n", "<leader>cf", ":colorscheme catppuccin-frappe<CR><esc>", { desc = "catppuccin frappe" })
-keymap.set("n", "<leader>cl", ":colorscheme catppuccin-latte<CR><esc>", { desc = "catppuccin latte" })
 
 
 -- Toggle terminal
