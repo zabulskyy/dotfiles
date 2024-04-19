@@ -13,7 +13,7 @@ require("lazy").setup(
         { import = "lazyvim.plugins.extras.lang.python" }
 )
 vim.opt.guicursor = { 'a:hor5', 'i:ver25' }
-vim.cmd.colorscheme "catppuccin-macchiato"
+vim.cmd.colorscheme "catppuccin-mocha"
 
 require("conform").setup({
     formatters_by_ft = {

@@ -7,9 +7,9 @@ return {
     },
     config = function()
         require("nvim-tree").setup {
-          sort = {
-            sorter = "extension",
-          }
+            sort = {
+                sorter = "extension",
+            }
         }
     end,
 

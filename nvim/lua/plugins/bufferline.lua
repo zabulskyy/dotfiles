@@ -13,7 +13,8 @@ return {
                         filetype = "NvimTree",
                         text_align = "center",
                         text = function()
-                            return vim.fn.getcwd()
+                            current_folder_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+                            return current_folder_name
                         end,
                     },
                 },

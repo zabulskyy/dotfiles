@@ -24,8 +24,7 @@ keymap.set("n", "<leader>go", "<cmd>BufferLineCloseOthers<cr>", { desc = "close 
 keymap.set("n", "<leader>gl", "<cmd>BufferLineCloseLeft<cr>", { desc = "close all buffers to the left" })
 keymap.set("n", "<leader>gr", "<cmd>BufferLineCloseRight<cr>", { desc = "close all buffers to the right" })
 keymap.set("n", "<leader>gn", "<cmd>BufferLineCycleNext<cr>", { desc = "go to the next buffer" })
-keymap.set("n", "<leader>gp", "<cmd>BufferLineCyclePrev<cr>", { desc = "go to the prev buffer"})
-
+keymap.set("n", "<leader>gp", "<cmd>BufferLineCyclePrev<cr>", { desc = "go to the prev buffer" })
 
 -- close brackets and quotes with no break
 keymap.set("i", "{", "{}<left>", { desc = "close { bracket" })
@@ -34,7 +33,6 @@ keymap.set("i", "[", "[]<left>", { desc = "close [ bracket" })
 keymap.set("i", "'", "''<left>", { desc = "close ' quote" })
 keymap.set("i", "\"", "\"\"<left>", { desc = "close \" quote" })
 keymap.set("i", "`", "``<left>", { desc = "close ` quote" })
-
 
 -- themes
 keymap.set("n", "<leader>c", " ", { desc = "themes" })
@@ -55,18 +53,14 @@ keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=100<cr>",
 keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<cr>", { desc = "toggle terminal tab" })
 keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "toggle terminal float" })
 
-
 -- Clear search with <esc>
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "escape and clear hlsearch" })
 
-
 -- lazy
-keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
-
+keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "lazy" })
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
-
 
 -- insert tab at the beginning of the line if tab is pressed in normal mode
 keymap.set("n", "<tab>", ">>")
@@ -75,12 +69,11 @@ keymap.set("n", "<s-tab>", "<<")
 -- add new line in normal mode if enter is pressed
 keymap.set("n", "<cr>", "o<esc>")
 
-
-
 -- Add any additional keymaps here
 keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "quit" })
 keymap.set("n", "<leader>qq", "<cmd>qall<cr>", { desc = "quit all" })
 keymap.set("n", "<leader>qa", "<cmd>qa<cr>", { desc = "quit all forse" })
+keymap.set("n", "<leader>qw", "<cmd>wqa<cr>", { desc = "write all add quit all forse" })
 
 -- move lines up and down
 keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "move line up" })
@@ -97,7 +90,7 @@ keymap.set("n", "H", "^", { desc = "move to the beginning of the line" })
 keymap.set("n", "L", "$", { desc = "move to the end of the line" })
 
 -- toggle capitalization
-keymap.set("n", "<leader>u", "vg~", { desc = "lowercase word" })
+keymap.set("n", "<leader>u", "vg~", { desc = "toggle case" })
 
 -- wrap ([{'"`(selected)`"'}]) text in brackets
 keymap.set("v", "(", "l<esc>`<i(<esc>`>a)<esc>", { desc = "wrap in ()" })
@@ -106,4 +99,3 @@ keymap.set("v", "{", "l<esc>`<i{<esc>`>a}<esc>", { desc = "wrap in {}" })
 keymap.set("v", "'", "l<esc>`<i'<esc>`>a'<esc>", { desc = "wrap in ''" })
 keymap.set("v", "`", "l<esc>`<i`<esc>`>a`<esc>", { desc = "wrap in ``" })
 keymap.set("v", "\"", "l<esc>`<i\"<esc>`>a\"<esc>", { desc = "wrap in \"\"" })
-
