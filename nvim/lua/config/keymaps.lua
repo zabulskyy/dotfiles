@@ -78,7 +78,6 @@ keymap.set("n", "<leader>qw", "<cmd>wqa<cr>", { desc = "write all add quit all f
 -- move lines up and down
 keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "move line up" })
 keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "move line down" })
-
 -- move visual selection up and down
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "move selection up" })
 keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "move selection down" })
@@ -99,3 +98,12 @@ keymap.set("v", "{", "l<esc>`<i{<esc>`>a}<esc>", { desc = "wrap in {}" })
 keymap.set("v", "'", "l<esc>`<i'<esc>`>a'<esc>", { desc = "wrap in ''" })
 keymap.set("v", "`", "l<esc>`<i`<esc>`>a`<esc>", { desc = "wrap in ``" })
 keymap.set("v", "\"", "l<esc>`<i\"<esc>`>a\"<esc>", { desc = "wrap in \"\"" })
+
+-- telescope
+local builtin = require('telescope.builtin')
+keymap.set('n', '<leader>f', " " , { desc = "find" })
+keymap.set('n', '<leader>ff', builtin.find_files, {desc = "find files" })
+keymap.set('n', '<leader>fg', builtin.live_grep, {desc = "find grep" })
+keymap.set('n', '<leader>fb', builtin.buffers, {desc = "find buffers" })
+keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "find help" })
+

@@ -5,6 +5,7 @@ return {
             ensure_installed = {
                 "pyright",
                 "lua-ls",
+                "clangd",
             },
         },
     },
