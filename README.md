@@ -17,6 +17,7 @@ sudo apt-get install ninja-build \
      gettext libtool libtool-bin \
      autoconf automake cmake g++ \
      pkg-config unzip
+
 ```
 
 ```
@@ -34,5 +35,11 @@ make CMAKE_BUILD_TYPE=Release \
 alias nvim=~/neovim/bin/nvim
 source ~/.bashrc
 nvim
+
+```
+
+```
+mv ~/.dotfiles/tmux ~/.config
+tmux source-file ~/.config/tmux/.tmux.conf
 
 ```
