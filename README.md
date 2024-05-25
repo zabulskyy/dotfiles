@@ -40,6 +40,7 @@ nvim
 
 ```
 mv ~/.dotfiles/tmux ~/.config
+git clone https://github.com/catppuccin/tmux ~/.config/tmux/plugins/catppuccin
 tmux source-file ~/.config/tmux/.tmux.conf
 
 ```
