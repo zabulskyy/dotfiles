@@ -4,12 +4,20 @@
 local keymap = vim.keymap
 
 -- nvim-tree
+keymap.set("n", "<leader>e", " ", { desc = "nvim-tree" })
+keymap.set("n", "<leader>ea", "<cmd>NvimTreeOpen<CR>", { desc = "open file explorer" }) -- open file explorer
+-- focus file explorer on current file
+keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<CR>", { desc = "focus file explorer on current file" })
 keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "toggle file explorer" }) -- toggle file explorer
-keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "toggle file explorer on current file" }) -- toggle file explorer on current file
-keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "collapse file explorer" }) -- collapse file explorer
+keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<CR>", { desc = "toggle file explorer on current file" }) -- toggle file explorer on current file
+keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapsefCR>", { desc = "collapse file explorer" }) -- collapse file explorer
 keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "refresh file explorer" }) -- refresh file explorer
 
 -- bufferline
+keymap.set("n", "<leader>g" , " ", { desc = "bufferline" })
+keymap.set("n", "<leader>gq", "<cmd>BufferLineClose<cr>", { desc = "close buffer" })
+keymap.set("n", "<leader>gQ", "<cmd>BufferLineCloseAllButCurrent<cr>", { desc = "close all buffers but current" })
+keymap.set("n", "<leader>gj", "<cmd>BufferLinePick<cr>", { desc = "pick buffer" })
 keymap.set("n", "<leader>g1", "<cmd>BufferLineGoToBuffer 1<cr>", { desc = "go to buffer 1" })
 keymap.set("n", "<leader>g2", "<cmd>BufferLineGoToBuffer 2<cr>", { desc = "go to buffer 2" })
 keymap.set("n", "<leader>g3", "<cmd>BufferLineGoToBuffer 3<cr>", { desc = "go to buffer 3" })
@@ -20,7 +28,6 @@ keymap.set("n", "<leader>g7", "<cmd>BufferLineGoToBuffer 7<cr>", { desc = "go to
 keymap.set("n", "<leader>g8", "<cmd>BufferLineGoToBuffer 8<cr>", { desc = "go to buffer 8" })
 keymap.set("n", "<leader>g9", "<cmd>BufferLineGoToBuffer 9<cr>", { desc = "go to buffer 9" })
 keymap.set("n", "<leader>g0", "<cmd>BufferLineGoToBuffer 10<cr>", { desc = "go to buffer 10" })
-keymap.set("n", "<leader>go", "<cmd>BufferLineCloseOthers<cr>", { desc = "close all other visible buffers" })
 keymap.set("n", "<leader>gl", "<cmd>BufferLineCloseLeft<cr>", { desc = "close all buffers to the left" })
 keymap.set("n", "<leader>gr", "<cmd>BufferLineCloseRight<cr>", { desc = "close all buffers to the right" })
 keymap.set("n", "<leader>gn", "<cmd>BufferLineCycleNext<cr>", { desc = "go to the next buffer" })
