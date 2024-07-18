@@ -25,6 +25,10 @@ keymap.set("n", "<leader>gl", "<cmd>BufferLineCloseLeft<cr>", { desc = "close al
 keymap.set("n", "<leader>gr", "<cmd>BufferLineCloseRight<cr>", { desc = "close all buffers to the right" })
 keymap.set("n", "<leader>gn", "<cmd>BufferLineCycleNext<cr>", { desc = "go to the next buffer" })
 keymap.set("n", "<leader>gp", "<cmd>BufferLineCyclePrev<cr>", { desc = "go to the prev buffer" })
+keymap.set("n", "<c-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "go to the next buffer" })
+keymap.set("n", "<c-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "go to the prev buffer" })
+keymap.set("n", "<c-j>", "<cmd>BufferLineMoveNext<cr>", { desc = "move buffer to the right" })
+keymap.set("n", "<c-k>", "<cmd>BufferLineMovePrev<cr>", { desc = "move buffer to the left" })
 
 -- close brackets and quotes with no break
 keymap.set("i", "{", "{}<left>", { desc = "close { bracket" })
