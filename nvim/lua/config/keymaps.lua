@@ -4,19 +4,16 @@
 local keymap = vim.keymap
 
 -- nvim-tree
-keymap.set("n", "<leader>e", " ", { desc = "nvim-tree" })
-keymap.set("n", "<leader>ea", "<cmd>NvimTreeOpen<CR>", { desc = "open file explorer" }) -- open file explorer
--- focus file explorer on current file
+keymap.set("n", "<leader>e", " ", { desc = "file explorer" })
+keymap.set("n", "<leader>ea", "<cmd>NvimTreeOpen<CR>", { desc = "open file explorer" })
 keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<CR>", { desc = "focus file explorer on current file" })
-keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "toggle file explorer" }) -- toggle file explorer
-keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<CR>", { desc = "toggle file explorer on current file" }) -- toggle file explorer on current file
-keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapsefCR>", { desc = "collapse file explorer" }) -- collapse file explorer
-keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "refresh file explorer" }) -- refresh file explorer
+keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "toggle file explorer" })
+keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<CR>", { desc = "focus file explorer on current file" })
+keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "refresh file explorer" })
 
 -- bufferline
 keymap.set("n", "<leader>g" , " ", { desc = "bufferline" })
-keymap.set("n", "<leader>gq", "<cmd>BufferLineClose<cr>", { desc = "close buffer" })
-keymap.set("n", "<leader>gQ", "<cmd>BufferLineCloseAllButCurrent<cr>", { desc = "close all buffers but current" })
+keymap.set("n", "<leader>gq", "<cmd>BufferLineCloseOthers<cr>", { desc = "close all buffers but current" })
 keymap.set("n", "<leader>gj", "<cmd>BufferLinePick<cr>", { desc = "pick buffer" })
 keymap.set("n", "<leader>g1", "<cmd>BufferLineGoToBuffer 1<cr>", { desc = "go to buffer 1" })
 keymap.set("n", "<leader>g2", "<cmd>BufferLineGoToBuffer 2<cr>", { desc = "go to buffer 2" })
@@ -63,6 +60,12 @@ keymap.set("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<cr>", { desc
 keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=100<cr>", { desc = "toggle terminal vertically" })
 keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<cr>", { desc = "toggle terminal tab" })
 keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "toggle terminal float" })
+-- open floating terminal and run "lazygit" command
+keymap.set("n", "<leader>tg", "<cmd>ToggleTerm direction=float<cr><cmd>term lazygit<cr>", { desc = "toggle terminal float and run lazygit" })
+-- open terminal in current file directory
+
+keymap.set("n", "<leader>tx", "<cmd>ToggleTerm direction=float<cr><cmd>term python3 /Users/bruno/.config/nvim/python.py<cr>", { desc = "toggle terminal float and run lazygit" })
+
 
 -- Clear search with <esc>
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "escape and clear hlsearch" })
@@ -80,10 +83,8 @@ keymap.set("n", "<s-tab>", "<<")
 -- add new line in normal mode if enter is pressed
 keymap.set("n", "<cr>", "o<esc>")
 
--- Add any additional keymaps here
 keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "quit" })
 keymap.set("n", "<leader>qq", "<cmd>qall<cr>", { desc = "quit all" })
-keymap.set("n", "<leader>qa", "<cmd>qa<cr>", { desc = "quit all forse" })
 keymap.set("n", "<leader>qw", "<cmd>wqa<cr>", { desc = "write all add quit all forse" })
 
 -- move lines up and down
